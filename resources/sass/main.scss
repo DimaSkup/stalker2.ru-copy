@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: $background;
+}
+
+.container {
+    margin: 20px 40px 0;
+}
+
+a, .link-text {
+    color: $link-color;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.link-block:hover .link-text, a:hover {
+    background-size: 100% 2px;
+}
+
+a.noanim {
+    background-image: none;
+}

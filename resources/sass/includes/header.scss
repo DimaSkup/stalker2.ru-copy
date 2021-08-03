@@ -1,0 +1,90 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 5%;
+}
+
+.logo {
+    display: flex;
+    background-image: none;
+    h2 {
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 300;
+        font-size: 24px;
+        align-items: center;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $menuItems;
+        margin: 3px 0 3px 10px;
+    }
+    img {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+nav.menu {
+    font-size: 0.75rem;
+    a {
+        margin-left: 2.5rem;
+        color: $menuItems;
+        text-transform: uppercase;
+        font-family: 'Quicksand', 'Open Sans', sans-serif;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 36px;
+        align-items: center;
+        letter-spacing: 0.2em;
+        list-style-type: none;
+    }
+}
+
+.social-icon-wrapper {
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    li {
+        list-style-type: none;
+        display: block;
+
+        a {
+            color: $menuItems;
+            background-image: none;
+        }
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+.icon-3d {
+    &:hover {
+        -webkit-animation: icon3d 400ms infinite;
+        animation: icon3d 400ms infinite;
+    }
+}
+
+@keyframes icon3d {
+    0% {
+        text-shadow: 5px 4px $redColor, -5px -6px $blueColor;
+    }
+    25% {
+        text-shadow: -5px -6px $redColor, 5px 4px $blueColor;
+    }
+    50% {
+        text-shadow: 5px -4px $redColor, -8px 4px $blueColor;
+    }
+    75% {
+        text-shadow: -8px -4px $redColor, -5px -4px $blueColor;
+    }
+    100% {
+        text-shadow: -5px 0 $redColor, 5px -4px $blueColor;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .social-icon-wrapper {
+        display: none;
+    }
+}

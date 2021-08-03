@@ -1,0 +1,65 @@
+.btn {
+    height: 40px;
+    padding: 8.5px 30px;
+    background: $primary;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: $input-text;
+    letter-spacing: 0.2em;
+    cursor: pointer;
+
+    &-sm {
+        padding: 6px 20px;
+    }
+
+    &-lg {
+        padding: 14px 40px;
+    }
+
+    &:hover {
+        transition: 1s ease-out;
+        border: 2px solid $primary-alt;
+        background: $primary-alt;
+    }
+
+    &.loading {
+        cursor: wait;
+        animation: cautionLine 40s infinite;
+        background-image: repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 20px,
+            rgba(0, 0, 0, 0.2) 20px,
+            rgba(0, 0, 0, 0.2) 40px
+        );
+        background-size: 400% 400%;
+    }
+
+    @keyframes cautionLine {
+        0%{background-position:0% 50%}
+        100%{background-position:100% 50%}
+    }
+}
+
+input.fc, textarea.fc {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 7.5px;
+    background: #000000;
+    border: 2px solid #757575;
+    box-sizing: border-box;
+    font-family: $input-text;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.2em;
+    color: #FFFFFF;
+
+    &:focus {
+        outline: none;
+        border-radius: 0;
+        border: 2px solid white;  
+    }
+}
